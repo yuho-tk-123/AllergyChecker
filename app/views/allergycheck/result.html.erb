@@ -1,0 +1,626 @@
+
+
+<div class="main allergycheck-result">
+    <div class="container">
+        <h1 class="allergycheck-heading">アレルギーチェック結果</h1>
+        <dev class="member_results">
+        <% @members.each do |member| %>
+            
+            <% if (@menu_bread_rice && ((member.shrimp == @menu_bread_rice.shrimp && member.shrimp) || (member.crab == @menu_bread_rice.crab && member.crab) || (member.walnuts == @menu_bread_rice.walnuts && member.walnuts) || (member.wheat == @menu_bread_rice.wheat && member.wheat) ||
+                (member.buckwheat == @menu_bread_rice.buckwheat && member.buckwheat) || (member.egg == @menu_bread_rice.egg && member.egg) || (member.milk == @menu_bread_rice.milk && member.milk) || (member.peanuts == @menu_bread_rice.peanuts && member.peanuts) || 
+                (member.almonds == @menu_bread_rice.almonds && member.almonds) || (member.abalone == @menu_bread_rice.abalone && member.abalone) || (member.squid == @menu_bread_rice.squid && member.squid) || (member.salmon_roe == @menu_bread_rice.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_bread_rice.orange && member.orange) || (member.cashews == @menu_bread_rice.cashews && member.cashews) || (member.kiwi_fruit == @menu_bread_rice.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_bread_rice.beef && member.beef) || 
+                (member.sesame == @menu_bread_rice.sesame && member.sesame) || (member.salmon == @menu_bread_rice.salmon && member.salmon) || (member.mackerel == @menu_bread_rice.mackerel && member.mackerel) || (member.soybeans == @menu_bread_rice.soybeans && member.soybeans) || 
+                (member.chicken == @menu_bread_rice.chicken && member.chicken) || (member.banana == @menu_bread_rice.banana && member.banana) || (member.pork == @menu_bread_rice.pork && member.pork) || (member.matsutake_mushrooms == @menu_bread_rice.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_bread_rice.peaches && member.peaches) || (member.yams == @menu_bread_rice.yams && member.yams) || (member.apples == @menu_bread_rice.apples && member.apples) || (member.gelatin == @menu_bread_rice.gelatin && member.gelatin))) ||
+                (@menu_milk && ((member.shrimp == @menu_milk.shrimp && member.shrimp) || (member.crab == @menu_milk.crab && member.crab) || (member.walnuts == @menu_milk.walnuts && member.walnuts) || (member.wheat == @menu_milk.wheat && member.wheat) ||
+                (member.buckwheat == @menu_milk.buckwheat && member.buckwheat) || (member.egg == @menu_milk.egg && member.egg) || (member.milk == @menu_milk.milk && member.milk) || (member.peanuts == @menu_milk.peanuts && member.peanuts) || 
+                (member.almonds == @menu_milk.almonds && member.almonds) || (member.abalone == @menu_milk.abalone && member.abalone) || (member.squid == @menu_milk.squid && member.squid) || (member.salmon_roe == @menu_milk.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_milk.orange && member.orange) || (member.cashews == @menu_milk.cashews && member.cashews) || (member.kiwi_fruit == @menu_milk.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_milk.beef && member.beef) || 
+                (member.sesame == @menu_milk.sesame && member.sesame) || (member.salmon == @menu_milk.salmon && member.salmon) || (member.mackerel == @menu_milk.mackerel && member.mackerel) || (member.soybeans == @menu_milk.soybeans && member.soybeans) || 
+                (member.chicken == @menu_milk.chicken && member.chicken) || (member.banana == @menu_milk.banana && member.banana) || (member.pork == @menu_milk.pork && member.pork) || (member.matsutake_mushrooms == @menu_milk.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_milk.peaches && member.peaches) || (member.yams == @menu_milk.yams && member.yams) || (member.apples == @menu_milk.apples && member.apples) || (member.gelatin == @menu_milk.gelatin && member.gelatin))) ||
+                (@menu_large_side_dish && ((member.shrimp == @menu_large_side_dish.shrimp && member.shrimp) || (member.crab == @menu_large_side_dish.crab && member.crab) || (member.walnuts == @menu_large_side_dish.walnuts && member.walnuts) || (member.wheat == @menu_large_side_dish.wheat && member.wheat) ||
+                (member.buckwheat == @menu_large_side_dish.buckwheat && member.buckwheat) || (member.egg == @menu_large_side_dish.egg && member.egg) || (member.milk == @menu_large_side_dish.milk && member.milk) || (member.peanuts == @menu_large_side_dish.peanuts && member.peanuts) || 
+                (member.almonds == @menu_large_side_dish.almonds && member.almonds) || (member.abalone == @menu_large_side_dish.abalone && member.abalone) || (member.squid == @menu_large_side_dish.squid && member.squid) || (member.salmon_roe == @menu_large_side_dish.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_large_side_dish.orange && member.orange) || (member.cashews == @menu_large_side_dish.cashews && member.cashews) || (member.kiwi_fruit == @menu_large_side_dish.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_large_side_dish.beef && member.beef) || 
+                (member.sesame == @menu_large_side_dish.sesame && member.sesame) || (member.salmon == @menu_large_side_dish.salmon && member.salmon) || (member.mackerel == @menu_large_side_dish.mackerel && member.mackerel) || (member.soybeans == @menu_large_side_dish.soybeans && member.soybeans) || 
+                (member.chicken == @menu_large_side_dish.chicken && member.chicken) || (member.banana == @menu_large_side_dish.banana && member.banana) || (member.pork == @menu_large_side_dish.pork && member.pork) || (member.matsutake_mushrooms == @menu_large_side_dish.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_large_side_dish.peaches && member.peaches) || (member.yams == @menu_large_side_dish.yams && member.yams) || (member.apples == @menu_large_side_dish.apples && member.apples) || (member.gelatin == @menu_large_side_dish.gelatin && member.gelatin))) ||
+                (@menu_small_side_dish_1 && ((member.shrimp == @menu_small_side_dish_1.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_1.crab && member.crab) || (member.walnuts == @menu_small_side_dish_1.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_1.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_1.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_1.egg && member.egg) || (member.milk == @menu_small_side_dish_1.milk && member.milk) || (member.peanuts == @menu_small_side_dish_1.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_1.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_1.abalone && member.abalone) || (member.squid == @menu_small_side_dish_1.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_1.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_1.orange && member.orange) || (member.cashews == @menu_small_side_dish_1.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_1.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_1.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_1.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_1.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_1.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_1.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_1.chicken && member.chicken) || (member.banana == @menu_small_side_dish_1.banana && member.banana) || (member.pork == @menu_small_side_dish_1.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_1.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_1.peaches && member.peaches) || (member.yams == @menu_small_side_dish_1.yams && member.yams) || (member.apples == @menu_small_side_dish_1.apples && member.apples) || (member.gelatin == @menu_small_side_dish_1.gelatin && member.gelatin))) ||
+                (@menu_small_side_dish_2 && ((member.shrimp == @menu_small_side_dish_2.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_2.crab && member.crab) || (member.walnuts == @menu_small_side_dish_2.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_2.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_2.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_2.egg && member.egg) || (member.milk == @menu_small_side_dish_2.milk && member.milk) || (member.peanuts == @menu_small_side_dish_2.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_2.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_2.abalone && member.abalone) || (member.squid == @menu_small_side_dish_2.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_2.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_2.orange && member.orange) || (member.cashews == @menu_small_side_dish_2.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_2.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_2.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_2.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_2.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_2.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_2.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_2.chicken && member.chicken) || (member.banana == @menu_small_side_dish_2.banana && member.banana) || (member.pork == @menu_small_side_dish_2.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_2.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_2.peaches && member.peaches) || (member.yams == @menu_small_side_dish_2.yams && member.yams) || (member.apples == @menu_small_side_dish_2.apples && member.apples) || (member.gelatin == @menu_small_side_dish_2.gelatin && member.gelatin))) || 
+                (@menu_small_side_dish_3 && ((member.shrimp == @menu_small_side_dish_3.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_3.crab && member.crab) || (member.walnuts == @menu_small_side_dish_3.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_3.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_3.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_3.egg && member.egg) || (member.milk == @menu_small_side_dish_3.milk && member.milk) || (member.peanuts == @menu_small_side_dish_3.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_3.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_3.abalone && member.abalone) || (member.squid == @menu_small_side_dish_3.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_3.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_3.orange && member.orange) || (member.cashews == @menu_small_side_dish_3.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_3.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_3.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_3.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_3.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_3.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_3.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_3.chicken && member.chicken) || (member.banana == @menu_small_side_dish_3.banana && member.banana) || (member.pork == @menu_small_side_dish_3.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_3.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_3.peaches && member.peaches) || (member.yams == @menu_small_side_dish_3.yams && member.yams) || (member.apples == @menu_small_side_dish_3.apples && member.apples) || (member.gelatin == @menu_small_side_dish_3.gelatin && member.gelatin))) %>
+                <div class = "member_result">
+                <h2>出席番号：<%= member.student_number %></h2>
+                <h2>氏名：<%= member.name %></h2>
+
+                <% if @menu_bread_rice && ((member.shrimp == @menu_bread_rice.shrimp && member.shrimp) || (member.crab == @menu_bread_rice.crab && member.crab) || (member.walnuts == @menu_bread_rice.walnuts && member.walnuts) || (member.wheat == @menu_bread_rice.wheat && member.wheat) ||
+                (member.buckwheat == @menu_bread_rice.buckwheat && member.buckwheat) || (member.egg == @menu_bread_rice.egg && member.egg) || (member.milk == @menu_bread_rice.milk && member.milk) || (member.peanuts == @menu_bread_rice.peanuts && member.peanuts) || 
+                (member.almonds == @menu_bread_rice.almonds && member.almonds) || (member.abalone == @menu_bread_rice.abalone && member.abalone) || (member.squid == @menu_bread_rice.squid && member.squid) || (member.salmon_roe == @menu_bread_rice.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_bread_rice.orange && member.orange) || (member.cashews == @menu_bread_rice.cashews && member.cashews) || (member.kiwi_fruit == @menu_bread_rice.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_bread_rice.beef && member.beef) || 
+                (member.sesame == @menu_bread_rice.sesame && member.sesame) || (member.salmon == @menu_bread_rice.salmon && member.salmon) || (member.mackerel == @menu_bread_rice.mackerel && member.mackerel) || (member.soybeans == @menu_bread_rice.soybeans && member.soybeans) || 
+                (member.chicken == @menu_bread_rice.chicken && member.chicken) || (member.banana == @menu_bread_rice.banana && member.banana) || (member.pork == @menu_bread_rice.pork && member.pork) || (member.matsutake_mushrooms == @menu_bread_rice.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_bread_rice.peaches && member.peaches) || (member.yams == @menu_bread_rice.yams && member.yams) || (member.apples == @menu_bread_rice.apples && member.apples) || (member.gelatin == @menu_bread_rice.gelatin && member.gelatin)) %>
+                    <h4>パン・ごはん:<%= @menu_bread_rice.name %></h4>
+                    <% if member.shrimp == @menu_bread_rice.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_bread_rice.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_bread_rice.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_bread_rice.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_bread_rice.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_bread_rice.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_bread_rice.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_bread_rice.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_bread_rice.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_bread_rice.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_bread_rice.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_bread_rice.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_bread_rice.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_bread_rice.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_bread_rice.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_bread_rice.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_bread_rice.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_bread_rice.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_bread_rice.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_bread_rice.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_bread_rice.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_bread_rice.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_bread_rice.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_bread_rice.matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_bread_rice.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_bread_rice.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_bread_rice.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_bread_rice.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+
+                <% if @menu_milk && ((member.shrimp == @menu_milk.shrimp && member.shrimp) || (member.crab == @menu_milk.crab && member.crab) || (member.walnuts == @menu_milk.walnuts && member.walnuts) || (member.wheat == @menu_milk.wheat && member.wheat) ||
+                (member.buckwheat == @menu_milk.buckwheat && member.buckwheat) || (member.egg == @menu_milk.egg && member.egg) || (member.milk == @menu_milk.milk && member.milk) || (member.peanuts == @menu_milk.peanuts && member.peanuts) || 
+                (member.almonds == @menu_milk.almonds && member.almonds) || (member.abalone == @menu_milk.abalone && member.abalone) || (member.squid == @menu_milk.squid && member.squid) || (member.salmon_roe == @menu_milk.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_milk.orange && member.orange) || (member.cashews == @menu_milk.cashews && member.cashews) || (member.kiwi_fruit == @menu_milk.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_milk.beef && member.beef) || 
+                (member.sesame == @menu_milk.sesame && member.sesame) || (member.salmon == @menu_milk.salmon && member.salmon) || (member.mackerel == @menu_milk.mackerel && member.mackerel) || (member.soybeans == @menu_milk.soybeans && member.soybeans) || 
+                (member.chicken == @menu_milk.chicken && member.chicken) || (member.banana == @menu_milk.banana && member.banana) || (member.pork == @menu_milk.pork && member.pork) || (member.matsutake_mushrooms == @menu_milk.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_milk.peaches && member.peaches) || (member.yams == @menu_milk.yams && member.yams) || (member.apples == @menu_milk.apples && member.apples) || (member.gelatin == @menu_milk.gelatin && member.gelatin)) %>
+                    <h4>牛乳：<%= @menu_milk.name %></h4>
+                    <% if member.shrimp == @menu_milk.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_milk.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_milk.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_milk.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_milk.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_milk.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_milk.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_milk.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_milk.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_milk.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_milk.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_milk.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_milk.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_milk.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_milk.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_milk.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_milk.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_milk.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_milk.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_milk.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_milk.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_milk.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_milk.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_milk.matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_milk.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_milk.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_milk.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_milk.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+
+                <% if @menu_large_side_dish && ((member.shrimp == @menu_large_side_dish.shrimp && member.shrimp) || (member.crab == @menu_large_side_dish.crab && member.crab) || (member.walnuts == @menu_large_side_dish.walnuts && member.walnuts) || (member.wheat == @menu_large_side_dish.wheat && member.wheat) ||
+                (member.buckwheat == @menu_large_side_dish.buckwheat && member.buckwheat) || (member.egg == @menu_large_side_dish.egg && member.egg) || (member.milk == @menu_large_side_dish.milk && member.milk) || (member.peanuts == @menu_large_side_dish.peanuts && member.peanuts) || 
+                (member.almonds == @menu_large_side_dish.almonds && member.almonds) || (member.abalone == @menu_large_side_dish.abalone && member.abalone) || (member.squid == @menu_large_side_dish.squid && member.squid) || (member.salmon_roe == @menu_large_side_dish.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_large_side_dish.orange && member.orange) || (member.cashews == @menu_large_side_dish.cashews && member.cashews) || (member.kiwi_fruit == @menu_large_side_dish.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_large_side_dish.beef && member.beef) || 
+                (member.sesame == @menu_large_side_dish.sesame && member.sesame) || (member.salmon == @menu_large_side_dish.salmon && member.salmon) || (member.mackerel == @menu_large_side_dish.mackerel && member.mackerel) || (member.soybeans == @menu_large_side_dish.soybeans && member.soybeans) || 
+                (member.chicken == @menu_large_side_dish.chicken && member.chicken) || (member.banana == @menu_large_side_dish.banana && member.banana) || (member.pork == @menu_large_side_dish.pork && member.pork) || (member.matsutake_mushrooms == @menu_large_side_dish.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_large_side_dish.peaches && member.peaches) || (member.yams == @menu_large_side_dish.yams && member.yams) || (member.apples == @menu_large_side_dish.apples && member.apples) || (member.gelatin == @menu_large_side_dish.gelatin && member.gelatin)) %>
+                    <h4>大きいおかず：<%= @menu_large_side_dish.name %></h4>
+                    <% if member.shrimp == @menu_large_side_dish.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_large_side_dish.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_large_side_dish.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_large_side_dish.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_large_side_dish.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_large_side_dish.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_large_side_dish.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_large_side_dish.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_large_side_dish.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_large_side_dish.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_large_side_dish.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_large_side_dish.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_large_side_dish.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_large_side_dish.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_large_side_dish.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_large_side_dish.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_large_side_dish.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_large_side_dish.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_large_side_dish.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_large_side_dish.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_large_side_dish.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_large_side_dish.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_large_side_dish.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_large_side_dish.matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_large_side_dish.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_large_side_dish.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_large_side_dish.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_large_side_dish.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+
+                <% if @menu_small_side_dish_1 && ((member.shrimp == @menu_small_side_dish_1.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_1.crab && member.crab) || (member.walnuts == @menu_small_side_dish_1.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_1.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_1.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_1.egg && member.egg) || (member.milk == @menu_small_side_dish_1.milk && member.milk) || (member.peanuts == @menu_small_side_dish_1.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_1.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_1.abalone && member.abalone) || (member.squid == @menu_small_side_dish_1.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_1.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_1.orange && member.orange) || (member.cashews == @menu_small_side_dish_1.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_1.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_1.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_1.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_1.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_1.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_1.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_1.chicken && member.chicken) || (member.banana == @menu_small_side_dish_1.banana && member.banana) || (member.pork == @menu_small_side_dish_1.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_1.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_1.peaches && member.peaches) || (member.yams == @menu_small_side_dish_1.yams && member.yams) || (member.apples == @menu_small_side_dish_1.apples && member.apples) || (member.gelatin == @menu_small_side_dish_1.gelatin && member.gelatin)) %>
+                    <h4>小さいおかず1：<%= @menu_small_side_dish_1.name %></h4>
+                    <% if member.shrimp == @menu_small_side_dish_1.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_small_side_dish_1.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_small_side_dish_1.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_small_side_dish_1.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_small_side_dish_1.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_small_side_dish_1.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_small_side_dish_1.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_small_side_dish_1.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_small_side_dish_1.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_small_side_dish_1.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_small_side_dish_1.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_small_side_dish_1.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_small_side_dish_1.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_small_side_dish_1.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_small_side_dish_1.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_small_side_dish_1.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_small_side_dish_1.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_small_side_dish_1.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_small_side_dish_1.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_small_side_dish_1.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_small_side_dish_1.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_small_side_dish_1.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_small_side_dish_1.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_small_side_dish_1.matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_small_side_dish_1.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_small_side_dish_1.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_small_side_dish_1.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_small_side_dish_1.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+
+                <% if @menu_small_side_dish_2 && ((member.shrimp == @menu_small_side_dish_2.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_2.crab && member.crab) || (member.walnuts == @menu_small_side_dish_2.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_2.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_2.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_2.egg && member.egg) || (member.milk == @menu_small_side_dish_2.milk && member.milk) || (member.peanuts == @menu_small_side_dish_2.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_2.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_2.abalone && member.abalone) || (member.squid == @menu_small_side_dish_2.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_2.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_2.orange && member.orange) || (member.cashews == @menu_small_side_dish_2.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_2.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_2.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_2.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_2.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_2.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_2.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_2.chicken && member.chicken) || (member.banana == @menu_small_side_dish_2.banana && member.banana) || (member.pork == @menu_small_side_dish_2.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_2.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_2.peaches && member.peaches) || (member.yams == @menu_small_side_dish_2.yams && member.yams) || (member.apples == @menu_small_side_dish_2.apples && member.apples) || (member.gelatin == @menu_small_side_dish_2.gelatin && member.gelatin)) %>
+                    <h4>小さいおかず2：<%= @menu_small_side_dish_2.name %></h4>
+                    <% if member.shrimp == @menu_small_side_dish_2.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_small_side_dish_2.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_small_side_dish_2.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_small_side_dish_2.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_small_side_dish_2.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_small_side_dish_2.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_small_side_dish_2.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_small_side_dish_2.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_small_side_dish_2.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_small_side_dish_2.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_small_side_dish_2.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_small_side_dish_2.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_small_side_dish_2.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_small_side_dish_2.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_small_side_dish_2.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_small_side_dish_2.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_small_side_dish_2.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_small_side_dish_2.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_small_side_dish_2.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_small_side_dish_2.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_small_side_dish_2.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_small_side_dish_2.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_small_side_dish_2.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_small_side_dish_2.matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_small_side_dish_2.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_small_side_dish_2.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_small_side_dish_2.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_small_side_dish_2.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+
+                <% if @menu_small_side_dish_3 && ((member.shrimp == @menu_small_side_dish_3.shrimp && member.shrimp) || (member.crab == @menu_small_side_dish_3.crab && member.crab) || (member.walnuts == @menu_small_side_dish_3.walnuts && member.walnuts) || (member.wheat == @menu_small_side_dish_3.wheat && member.wheat) ||
+                (member.buckwheat == @menu_small_side_dish_3.buckwheat && member.buckwheat) || (member.egg == @menu_small_side_dish_3.egg && member.egg) || (member.milk == @menu_small_side_dish_3.milk && member.milk) || (member.peanuts == @menu_small_side_dish_3.peanuts && member.peanuts) || 
+                (member.almonds == @menu_small_side_dish_3.almonds && member.almonds) || (member.abalone == @menu_small_side_dish_3.abalone && member.abalone) || (member.squid == @menu_small_side_dish_3.squid && member.squid) || (member.salmon_roe == @menu_small_side_dish_3.salmon_roe && member.salmon_roe) || 
+                (member.orange == @menu_small_side_dish_3.orange && member.orange) || (member.cashews == @menu_small_side_dish_3.cashews && member.cashews) || (member.kiwi_fruit == @menu_small_side_dish_3.kiwi_fruit && member.kiwi_fruit) || (member.beef == @menu_small_side_dish_3.beef && member.beef) || 
+                (member.sesame == @menu_small_side_dish_3.sesame && member.sesame) || (member.salmon == @menu_small_side_dish_3.salmon && member.salmon) || (member.mackerel == @menu_small_side_dish_3.mackerel && member.mackerel) || (member.soybeans == @menu_small_side_dish_3.soybeans && member.soybeans) || 
+                (member.chicken == @menu_small_side_dish_3.chicken && member.chicken) || (member.banana == @menu_small_side_dish_3.banana && member.banana) || (member.pork == @menu_small_side_dish_3.pork && member.pork) || (member.matsutake_mushrooms == @menu_small_side_dish_3.matsutake_mushrooms && member.matsutake_mushrooms) || 
+                (member.peaches == @menu_small_side_dish_3.peaches && member.peaches) || (member.yams == @menu_small_side_dish_3.yams && member.yams) || (member.apples == @menu_small_side_dish_3.apples && member.apples) || (member.gelatin == @menu_small_side_dish_3.gelatin && member.gelatin)) %>
+                    <h4>小さいおかず3：<%= @menu_small_side_dish_3.name %></h4>
+                    <% if member.shrimp == @menu_small_side_dish_3.shrimp && member.shrimp %>
+                        <p>・えび</p>
+                    <% end %>
+                    <% if member.crab == @menu_small_side_dish_3.crab && member.crab %>
+                        <p>・かに</p>
+                    <% end %>
+                    <% if member.walnuts == @menu_small_side_dish_3.walnuts && member.walnuts %>
+                        <p>・くるみ</p>
+                    <% end %>
+                    <% if member.wheat == @menu_small_side_dish_3.wheat && member.wheat %>
+                        <p>・小麦</p>
+                    <% end %>
+                    <% if member.buckwheat == @menu_small_side_dish_3.buckwheat && member.buckwheat %>
+                        <p>・そば</p>
+                    <% end %>
+                    <% if member.egg == @menu_small_side_dish_3.egg && member.egg %>
+                        <p>・卵</p>
+                    <% end %>
+                    <% if member.milk == @menu_small_side_dish_3.milk && member.milk %>
+                        <p>・乳</p>
+                    <% end %>
+                    <% if member.peanuts == @menu_small_side_dish_3.peanuts && member.peanuts %>
+                        <p>・落花生（ピーナッツ）</p>
+                    <% end %>
+                    <% if member.almonds == @menu_small_side_dish_3.almonds && member.almonds %>
+                        <p>・アーモンド</p>
+                    <% end %>
+                    <% if member.abalone == @menu_small_side_dish_3.abalone && member.abalone %>
+                        <p>・あわび</p>
+                    <% end %>
+                    <% if member.squid == @menu_small_side_dish_3.squid && member.squid %>
+                        <p>・いか</p>
+                    <% end %>
+                    <% if member.salmon_roe == @menu_small_side_dish_3.salmon_roe && member.salmon_roe %>
+                        <p>・いくら</p>
+                    <% end %>
+                    <% if member.orange == @menu_small_side_dish_3.orange && member.orange %>
+                        <p>・オレンジ</p>
+                    <% end %>
+                    <% if member.cashews == @menu_small_side_dish_3.cashews && member.cashews %>
+                        <p>・カシューナッツ</p>
+                    <% end %>
+                    <% if member.kiwi_fruit == @menu_small_side_dish_3.kiwi_fruit && member.kiwi_fruit %>
+                        <p>・キウイフルーツ</p>
+                    <% end %>
+                    <% if member.beef == @menu_small_side_dish_3.beef && member.beef %>
+                        <p>・牛肉</p>
+                    <% end %>
+                    <% if member.sesame == @menu_small_side_dish_3.sesame && member.sesame %>
+                        <p>・ごま</p>
+                    <% end %>
+                    <% if member.salmon == @menu_small_side_dish_3.salmon && member.salmon %>
+                        <p>・さけ</p>
+                    <% end %>
+                    <% if member.mackerel == @menu_small_side_dish_3.mackerel && member.mackerel %>
+                        <p>・さば</p>
+                    <% end %>
+                    <% if member.soybeans == @menu_small_side_dish_3.soybeans && member.soybeans %>
+                        <p>・大豆</p>
+                    <% end %>
+                    <% if member.chicken == @menu_small_side_dish_3.chicken && member.chicken %>
+                        <p>・鶏肉</p>
+                    <% end %>
+                    <% if member.banana == @menu_small_side_dish_3.banana && member.banana %>
+                        <p>・バナナ</p>
+                    <% end %>
+                    <% if member.pork == @menu_small_side_dish_3.pork && member.pork %>
+                        <p>・豚肉</p>
+                    <% end %>
+                    <% if member.matsutake_mushrooms == @menu_small_side_dish_3matsutake_mushrooms && member.matsutake_mushrooms %>
+                        <p>・まつたけ</p>
+                    <% end %>
+                    <% if member.peaches == @menu_small_side_dish_3.peaches && member.peaches %>
+                        <p>・もも</p>
+                    <% end %>
+                    <% if member.yams == @menu_small_side_dish_3.yams && member.yams %>
+                        <p>・やまいも</p>
+                    <% end %>
+                    <% if member.apples == @menu_small_side_dish_3.apples && member.apples %>
+                        <p>・りんご</p>
+                    <% end %>
+                    <% if member.gelatin == @menu_small_side_dish_3.gelatin && member.gelatin %>
+                        <p>・ゼラチン</p>
+                    <% end %>
+                <% end %>
+            </div>
+            <% end %>
+        <% end %>
+        </div>
+        <div class="end">
+            <%= link_to("完了", "/top_menu") %>
+        </div>
+    </div>
+</div>

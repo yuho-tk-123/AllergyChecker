@@ -1,0 +1,92 @@
+/* menus/index ================================ */
+.menus-heading {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 48px;
+    text-align: center;
+    color: #bcc8d4;
+  }
+
+  .menu-new {
+    text-align: center;
+  }
+
+  .menu-new a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+  }
+  
+  .menus-index-item {
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    display: table;
+    width: 100%;
+  }
+  
+  .menu-name a {
+    font-weight: 600;
+  }
+  
+  .menu-name a:hover {
+    color: #3ecdc6;
+  }
+  
+  .menu-left {
+    float: left;
+    width: 10%;
+  }
+  
+  .menu-right {
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  /* menus/new, menus/edit ================================ */
+.menus-form input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  border-bottom: 1px solid #8899a6;
+}
+
+.form-group label {
+  width: 50%;
+}
+
+/* menus/show ================================ */
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.menu p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.menu a {
+  color: #8899a6;
+  text-decoration: underline;
+  font-weight: 200;
+}
+
+.menu span {
+  color: #afb6bf;
+  font-weight: 200;
+  padding: 0 6px 0 8px;
+}

@@ -1,0 +1,22 @@
+<div class="main teams-edit">
+  <div class="container">
+    <div class="form-heading">チーム編集</div>
+    <div class="form teams-form">
+      <div class="form-body">
+        <% @team.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+      
+        <%= form_tag("/teams/#{@team.id}/update") do %>
+          <p>チーム名</p>
+          <input name="name" value="<%= @team.name %>">
+          <p>チームid</p>
+          <input name="team_id" value="<%= @team.team_id %>">
+          <input type="submit" value="保存">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

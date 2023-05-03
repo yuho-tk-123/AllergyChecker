@@ -1,0 +1,47 @@
+/* allergycheck/check ================================ */
+.allergycheck-heading {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 48px;
+    text-align: center;
+    color: #bcc8d4;
+}
+
+.allergycheck-check {
+    width: 80%;
+    text-align: center;
+}
+
+.allergycheck-check a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+.allergycheck-check input {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #3ecdc6;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    width: 120px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.end {
+    text-align: center;
+}
+
+.end a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+
+
+.member_result {
+    border-bottom: 1px solid #8899a6;
+}

@@ -1,0 +1,38 @@
+/* teams/show ================================ */
+.team-show {
+    text-align: center;
+  }
+  
+  .team {
+    margin-bottom: 20px;
+  }
+  
+  .team h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .team p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .team a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+  }
+  
+  .team span {
+    color: #afb6bf;
+    font-weight: 200;
+    padding: 0 6px 0 8px;
+  }
+
+/* teams/new, teams/edit ================================ */
+.teams-form input {
+    margin-bottom: 15px;
+  }
+
+  

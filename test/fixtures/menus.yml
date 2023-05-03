@@ -1,0 +1,65 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_id: 1
+  name: MyString
+  shrimp: false
+  crab: false
+  walnuts: false
+  wheat: false
+  buckwheat: false
+  egg: false
+  milk: false
+  peanuts: false
+  almonds: false
+  abalone: false
+  squid: false
+  salmon_roe: false
+  orange: false
+  cashews: false
+  kiwi_fruit: false
+  beef: false
+  sesame: false
+  salmon: false
+  mackerel: false
+  soybeans: false
+  chicken: false
+  banana: false
+  pork: false
+  matsutake_mushrooms: false
+  peaches: false
+  yams: false
+  apples: false
+  gelatin: false
+
+two:
+  team_id: 1
+  name: MyString
+  shrimp: false
+  crab: false
+  walnuts: false
+  wheat: false
+  buckwheat: false
+  egg: false
+  milk: false
+  peanuts: false
+  almonds: false
+  abalone: false
+  squid: false
+  salmon_roe: false
+  orange: false
+  cashews: false
+  kiwi_fruit: false
+  beef: false
+  sesame: false
+  salmon: false
+  mackerel: false
+  soybeans: false
+  chicken: false
+  banana: false
+  pork: false
+  matsutake_mushrooms: false
+  peaches: false
+  yams: false
+  apples: false
+  gelatin: false

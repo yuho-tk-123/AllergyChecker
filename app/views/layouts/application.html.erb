@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AllergyChecker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <% if @current_team %>
+          <%= link_to("AllergyChecker", "/top_menu") %>
+        <% else %>
+        <%= link_to("AllergyChecker", "/") %>
+        <% end %>
+      </div>
+
+      <ul class="header-menus">
+        <% if @current_team %>
+          <li>
+            <%= link_to(@current_team.name, "/top_menu") %>
+          </li>
+          <li>
+            <%= link_to("トップメニュー", "/top_menu") %>
+          </li>
+          <li>
+            <%= link_to("チーム編集", "/teams/#{@current_team.id}") %>
+          </li>
+          <li>
+            <%= link_to("メンバー登録", "/members/index") %>
+          </li>
+          <li>
+            <%= link_to("メニュー登録", "/menus/index") %>
+          </li>
+          <li>
+            <%= link_to("アレルギーチェック", "/allergycheck") %>
+          </li>
+          <li>
+            <%= link_to("ログアウト", "/logout",) %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("AllergyCheckerとは？", "/about") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+          <li>
+            <%= link_to("新規作成", "/signup") %>
+          </li>
+        <% end %>
+      </ul>
+      
+    </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    
+    <%= yield %>
+  </body>
+</html>

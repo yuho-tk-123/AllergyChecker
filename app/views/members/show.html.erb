@@ -1,0 +1,105 @@
+<div class="main member-show">
+  <div class="container">
+    <div class="member">
+        <h2>氏名：<%= @member.name %></h2>
+        <p>出席番号：<%= @member.student_number %></p>
+        <h3>アレルギー</h3>
+        <% if @member.shrimp || @member.crab || @member.walnuts || @member.wheat || @member.buckwheat || @member.egg || @member.milk || @member.peanuts %>
+            <p>【特定原材料8品目（表示義務）】</p>
+        <% end %>
+        <% if @member.shrimp %>
+            <p>・えび</p>
+        <% end %>
+        <% if @member.crab %>
+            <p>・かに</p>
+        <% end %>
+        <% if @member.walnuts %>
+            <p>・くるみ</p>
+        <% end %>
+        <% if @member.wheat %>
+            <p>・小麦</p>
+        <% end %>
+        <% if @member.buckwheat %>
+            <p>・そば</p>
+        <% end %>
+        <% if @member.egg %>
+            <p>・卵</p>
+        <% end %>
+        <% if @member.milk %>
+            <p>・乳</p>
+        <% end %>
+        <% if @member.peanuts %>
+            <p>・落花生（ピーナッツ）</p>
+        <% end %>
+        <% if @member.almonds || @member.abalone || @member.squid || @member.salmon_roe || @member.orange || @member.cashews || @member.kiwi_fruit || @member.beef || @member.sesame || @member.salmon || @member.mackerel || @member.soybeans || @member.chicken || @member.banana || @member.pork || @member.matsutake_mushrooms || @member.peaches || @member.yams || @member.apples || @member.gelatin %>
+            <p>【特定原材料に準ずるもの 推奨20品目】</p>
+        <% end %>
+        <% if @member.almonds %>
+            <p>・アーモンド</p>
+        <% end %>
+        <% if @member.abalone %>
+            <p>・あわび</p>
+        <% end %>
+        <% if @member.squid %>
+            <p>・いか</p>
+        <% end %>
+        <% if @member.salmon_roe %>
+            <p>・いくら</p>
+        <% end %>
+        <% if @member.orange %>
+            <p>・オレンジ</p>
+        <% end %>
+        <% if @member.cashews %>
+            <p>・カシューナッツ</p>
+        <% end %>
+        <% if @member.kiwi_fruit %>
+            <p>・キウイフルーツ</p>
+        <% end %>
+        <% if @member.beef %>
+            <p>・牛肉</p>
+        <% end %>
+        <% if @member.sesame %>
+            <p>・ごま</p>
+        <% end %>
+        <% if @member.salmon %>
+            <p>・さけ</p>
+        <% end %>
+        <% if @member.mackerel %>
+            <p>・さば</p>
+        <% end %>
+        <% if @member.soybeans %>
+            <p>・大豆</p>
+        <% end %>
+        <% if @member.chicken %>
+            <p>・鶏肉</p>
+        <% end %>
+        <% if @member.banana %>
+            <p>・バナナ</p>
+        <% end %>
+        <% if @member.pork %>
+            <p>・豚肉</p>
+        <% end %>
+        <% if @member.matsutake_mushrooms %>
+            <p>・まつたけ</p>
+        <% end %>
+        <% if @member.peaches %>
+            <p>・もも</p>
+        <% end %>
+        <% if @member.yams %>
+            <p>・やまいも</p>
+        <% end %>
+        <% if @member.apples %>
+            <p>・りんご</p>
+        <% end %>
+        <% if @member.gelatin %>
+            <p>・ゼラチン</p>
+        <% end %>
+        <% unless @member.shrimp || @member.crab || @member.walnuts || @member.wheat || @member.buckwheat || @member.egg || @member.milk || @member.peanuts || @member.almonds || @member.abalone || @member.squid || @member.salmon_roe || @member.orange || @member.cashews || @member.kiwi_fruit || @member.beef || @member.sesame || @member.salmon || @member.mackerel || @member.soybeans || @member.chicken || @member.banana || @member.pork || @member.matsutake_mushrooms || @member.peaches || @member.yams || @member.apples || @member.gelatin %>
+            <p>なし</p>
+        <% end %>
+        <%= link_to("編集", "/members/#{@member.id}/edit") %>
+        <%= link_to("削除", "/members/#{@member.id}/destroy") %>
+    </div>
+    
+  </div>
+</div>

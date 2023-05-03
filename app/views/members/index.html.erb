@@ -1,0 +1,20 @@
+<div class="main members-index">
+  <div class="container">
+    <h1 class="members-heading">メンバー一覧</h1>
+    <div class="member-new">
+        <%= link_to("新規メンバー登録", "/members/new") %>
+    </div>
+    <% if @members %>
+        <% @members.each do |member| %>
+            <div class="members-index-item">
+                <div class="member-left">
+                    <%= link_to(member.student_number, "/members/#{member.id}") %>
+                </div>
+                <div class="member-right">
+                    <%= link_to(member.name, "/members/#{member.id}") %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+</div>

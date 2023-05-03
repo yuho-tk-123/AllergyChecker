@@ -1,0 +1,13 @@
+<div class="main team-show">
+  <div class="container">
+    <div class="team">
+      <h2>チーム名：<%= @team.name %></h2>
+      <p>チームid：<%= @team.team_id %></p>
+      <% if @team.id == @current_team.id %>
+        <%= link_to("編集", "/teams/#{@team.id}/edit") %>
+        <%= link_to("削除", "/teams/#{@team.id}/destroy") %>
+      <% end %>
+    </div>
+    
+  </div>
+</div>

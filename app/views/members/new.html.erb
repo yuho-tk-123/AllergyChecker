@@ -1,0 +1,137 @@
+<div class="main members-new">
+  <div class="container">
+    <div class="form-heading">新規メンバー登録</div>
+    <div class="form members-form">
+        <div class="form-body">
+            <% @member.errors.full_messages.each do |message| %>
+            <div class="form-error">
+                <%= message %>
+            </div>
+            <% end %>
+            
+            <%= form_tag("/members/create") do %>
+                <p>出席番号</p>
+                <input name="student_number" value="<%= @member.student_number %>">
+                <p>氏名</p>
+                <input name="name" value="<%= @member.name %>">
+                <p>アレルギー</p>
+                <p>【特定原材料8品目（表示義務）】</p>
+                <div class="form-group">
+                    <label for="shrimp">えび</label>
+                    <input type="checkbox" name="shrimp" value="1" <%= @member.shrimp ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="crab">かに</label>
+                    <input type="checkbox" name="crab" value="1" <%= @member.crab ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="walnuts">くるみ</label>
+                    <input type="checkbox" name="walnuts" value="1" <%= @member.walnuts ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="wheat">小麦</label>
+                    <input type="checkbox" name="wheat" value="1" <%= @member.wheat ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="buckwheat">そば</label>
+                    <input type="checkbox" name="buckwheat" value="1" <%= @member.buckwheat ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="egg">卵</label>
+                    <input type="checkbox" name="egg" value="1" <%= @member.egg ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="milk">乳</label>
+                    <input type="checkbox" name="milk" value="1" <%= @member.milk ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="peanuts">落花生（ピーナッツ）</label>
+                    <input type="checkbox" name="peanuts" value="1" <%= @member.peanuts ? 'checked' : '' %>>
+                </div>
+                <p>【特定原材料に準ずるもの 推奨20品目】</p>
+                <div class="form-group">
+                    <label for="almonds">アーモンド</label>
+                    <input type="checkbox" name="almonds" value="1" <%= @member.almonds ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="abalone">あわび</label>
+                    <input type="checkbox" name="abalone" value="1" <%= @member.abalone ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="squid">いか</label>
+                    <input type="checkbox" name="squid" value="1" <%= @member.squid ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="salmon_roe">いくら</label>
+                    <input type="checkbox" name="salmon_roe" value="1" <%= @member.salmon_roe ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="orange">オレンジ</label>
+                    <input type="checkbox" name="orange" value="1" <%= @member.orange ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="cashews">カシューナッツ</label>
+                    <input type="checkbox" name="cashews" value="1" <%= @member.cashews ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="kiwi_fruit">キウイフルーツ</label>
+                    <input type="checkbox" name="kiwi_fruit" value="1" <%= @member.kiwi_fruit ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="beef">牛肉</label>
+                    <input type="checkbox" name="beef" value="1" <%= @member.beef ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="sesame">ごま</label>
+                    <input type="checkbox" name="sesame" value="1" <%= @member.sesame ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="salmon">さけ</label>
+                    <input type="checkbox" name="salmon" value="1" <%= @member.salmon ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="mackerel">さば</label>
+                    <input type="checkbox" name="mackerel" value="1" <%= @member.mackerel ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="soybeans">大豆</label>
+                    <input type="checkbox" name="soybeans" value="1" <%= @member.soybeans ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="chicken">鶏肉</label>
+                    <input type="checkbox" name="chicken" value="1" <%= @member.chicken ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="banana">バナナ</label>
+                    <input type="checkbox" name="banana" value="1" <%= @member.banana ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="pork">豚肉</label>
+                    <input type="checkbox" name="pork" value="1" <%= @member.pork ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="matsutake_mushrooms">まつたけ</label>
+                    <input type="checkbox" name="matsutake_mushrooms" value="1" <%= @member.matsutake_mushrooms ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="peaches">もも</label>
+                    <input type="checkbox" name="peaches" value="1" <%= @member.peaches ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="yams">やまいも</label>
+                    <input type="checkbox" name="yams" value="1" <%= @member.yams ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="apples">りんご</label>
+                    <input type="checkbox" name="apples" value="1" <%= @member.apples ? 'checked' : '' %>>
+                </div>
+                <div class="form-group">
+                    <label for="gelatin">ゼラチン</label>
+                    <input type="checkbox" name="gelatin" value="1" <%= @member.gelatin ? 'checked' : '' %>>
+                </div>
+                <input type="submit" value="新規登録">
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>

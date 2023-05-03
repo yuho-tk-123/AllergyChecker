@@ -1,0 +1,114 @@
+<div class="main menu-show">
+  <div class="container">
+    <div class="menu">
+        <h2>メニュー名：<%= @menu.name %></h2>
+        <h3>分類</h3>
+        <% if @menu.division == "bread_rice" %>
+            <p> パン・ごはん</p>
+        <% elsif @menu.division == "milk" %>
+            <p> 牛乳</p>
+        <% elsif @menu.division == "large_side_dish" %>
+            <p> 大きいおかず</p>
+        <% elsif @menu.division == "small_side_dish" %>
+            <p> 小さいおかず</p>
+        <% end %>
+        <h3>アレルギー</h3>
+        <% if @menu.shrimp || @menu.crab || @menu.walnuts || @menu.wheat || @menu.buckwheat || @menu.egg || @menu.milk || @menu.peanuts %>
+            <p>【特定原材料8品目（表示義務）】</p>
+        <% end %>
+        <% if @menu.shrimp %>
+            <p>・えび</p>
+        <% end %>
+        <% if @menu.crab %>
+            <p>・かに</p>
+        <% end %>
+        <% if @menu.walnuts %>
+            <p>・くるみ</p>
+        <% end %>
+        <% if @menu.wheat %>
+            <p>・小麦</p>
+        <% end %>
+        <% if @menu.buckwheat %>
+            <p>・そば</p>
+        <% end %>
+        <% if @menu.egg %>
+            <p>・卵</p>
+        <% end %>
+        <% if @menu.milk %>
+            <p>・乳</p>
+        <% end %>
+        <% if @menu.peanuts %>
+            <p>・落花生（ピーナッツ）</p>
+        <% end %>
+        <% if @menu.almonds || @menu.abalone || @menu.squid || @menu.salmon_roe || @menu.orange || @menu.cashews || @menu.kiwi_fruit || @menu.beef || @menu.sesame || @menu.salmon || @menu.mackerel || @menu.soybeans || @menu.chicken || @menu.banana || @menu.pork || @menu.matsutake_mushrooms || @menu.peaches || @menu.yams || @menu.apples || @menu.gelatin %>
+            <p>【特定原材料に準ずるもの 推奨20品目】</p>
+        <% end %>
+        <% if @menu.almonds %>
+            <p>・アーモンド</p>
+        <% end %>
+        <% if @menu.abalone %>
+            <p>・あわび</p>
+        <% end %>
+        <% if @menu.squid %>
+            <p>・いか</p>
+        <% end %>
+        <% if @menu.salmon_roe %>
+            <p>・いくら</p>
+        <% end %>
+        <% if @menu.orange %>
+            <p>・オレンジ</p>
+        <% end %>
+        <% if @menu.cashews %>
+            <p>・カシューナッツ</p>
+        <% end %>
+        <% if @menu.kiwi_fruit %>
+            <p>・キウイフルーツ</p>
+        <% end %>
+        <% if @menu.beef %>
+            <p>・牛肉</p>
+        <% end %>
+        <% if @menu.sesame %>
+            <p>・ごま</p>
+        <% end %>
+        <% if @menu.salmon %>
+            <p>・さけ</p>
+        <% end %>
+        <% if @menu.mackerel %>
+            <p>・さば</p>
+        <% end %>
+        <% if @menu.soybeans %>
+            <p>・大豆</p>
+        <% end %>
+        <% if @menu.chicken %>
+            <p>・鶏肉</p>
+        <% end %>
+        <% if @menu.banana %>
+            <p>・バナナ</p>
+        <% end %>
+        <% if @menu.pork %>
+            <p>・豚肉</p>
+        <% end %>
+        <% if @menu.matsutake_mushrooms %>
+            <p>・まつたけ</p>
+        <% end %>
+        <% if @menu.peaches %>
+            <p>・もも</p>
+        <% end %>
+        <% if @menu.yams %>
+            <p>・やまいも</p>
+        <% end %>
+        <% if @menu.apples %>
+            <p>・りんご</p>
+        <% end %>
+        <% if @menu.gelatin %>
+            <p>・ゼラチン</p>
+        <% end %>
+        <% unless @menu.shrimp || @menu.crab || @menu.walnuts || @menu.wheat || @menu.buckwheat || @menu.egg || @menu.milk || @menu.peanuts || @menu.almonds || @menu.abalone || @menu.squid || @menu.salmon_roe || @menu.orange || @menu.cashews || @menu.kiwi_fruit || @menu.beef || @menu.sesame || @menu.salmon || @menu.mackerel || @menu.soybeans || @menu.chicken || @menu.banana || @menu.pork || @menu.matsutake_mushrooms || @menu.peaches || @menu.yams || @menu.apples || @menu.gelatin %>
+            <p>なし</p>
+        <% end %>
+        <%= link_to("編集", "/menus/#{@menu.id}/edit") %>
+        <%= link_to("削除", "/menus/#{@menu.id}/destroy") %>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,143 @@
+<div class="main menus-edit">
+  <div class="container">
+    <div class="form-heading">メニュー編集</div>
+    <div class="form menus-form">
+        <div class="form-body">
+            <% @menu.errors.full_messages.each do |message| %>
+            <div class="form-error">
+                <%= message %>
+            </div>
+            <% end %>
+            
+            <%= form_tag("/menus/#{@menu.id}/update") do %>
+            <p>メニュー名</p>
+            <input name="name" value="<%= @menu.name %>">
+            <p>分類</p>
+            <select name="division">
+                <option value="">分類を選択</option>
+                <option value="bread_rice" <%= 'selected' if @menu.division == 'bread_rice' %>>パン・ごはん</option>
+                <option value="milk" <%= 'selected' if @menu.division == 'milk' %>>牛乳</option>
+                <option value="large_side_dish" <%= 'selected' if @menu.division == 'large_side_dish' %>>大きいおかず</option>
+                <option value="small_side_dish" <%= 'selected' if @menu.division == 'small_side_dish' %>>小さいおかず</option>
+            </select>    
+            <p>アレルギー</p>
+            <p>【特定原材料8品目（表示義務）】</p>
+            <div class="form-group">
+                <label for="shrimp">えび</label>
+                <input type="checkbox" name="shrimp" value="1" <%= @menu.shrimp ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="crab">かに</label>
+                <input type="checkbox" name="crab" value="1" <%= @menu.crab ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="walnuts">くるみ</label>
+                <input type="checkbox" name="walnuts" value="1" <%= @menu.walnuts ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="wheat">小麦</label>
+                <input type="checkbox" name="wheat" value="1" <%= @menu.wheat ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="buckwheat">そば</label>
+                <input type="checkbox" name="buckwheat" value="1" <%= @menu.buckwheat ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="egg">卵</label>
+                <input type="checkbox" name="egg" value="1" <%= @menu.egg ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="milk">乳</label>
+                <input type="checkbox" name="milk" value="1" <%= @menu.milk ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="peanuts">落花生（ピーナッツ）</label>
+                <input type="checkbox" name="peanuts" value="1" <%= @menu.peanuts ? 'checked' : '' %>>
+            </div>
+            <p>【特定原材料に準ずるもの 推奨20品目】</p>
+            <div class="form-group">
+                <label for="almonds">アーモンド</label>
+                <input type="checkbox" name="almonds" value="1" <%= @menu.almonds ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="abalone">あわび</label>
+                <input type="checkbox" name="abalone" value="1" <%= @menu.abalone ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="squid">いか</label>
+                <input type="checkbox" name="squid" value="1" <%= @menu.squid ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="salmon_roe">いくら</label>
+                <input type="checkbox" name="salmon_roe" value="1" <%= @menu.salmon_roe ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="orange">オレンジ</label>
+                <input type="checkbox" name="orange" value="1" <%= @menu.orange ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="cashews">カシューナッツ</label>
+                <input type="checkbox" name="cashews" value="1" <%= @menu.cashews ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="kiwi_fruit">キウイフルーツ</label>
+                <input type="checkbox" name="kiwi_fruit" value="1" <%= @menu.kiwi_fruit ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="beef">牛肉</label>
+                <input type="checkbox" name="beef" value="1" <%= @menu.beef ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="sesame">ごま</label>
+                <input type="checkbox" name="sesame" value="1" <%= @menu.sesame ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="salmon">さけ</label>
+                <input type="checkbox" name="salmon" value="1" <%= @menu.salmon ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="mackerel">さば</label>
+                <input type="checkbox" name="mackerel" value="1" <%= @menu.mackerel ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="soybeans">大豆</label>
+                <input type="checkbox" name="soybeans" value="1" <%= @menu.soybeans ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="chicken">鶏肉</label>
+                <input type="checkbox" name="chicken" value="1" <%= @menu.chicken ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="banana">バナナ</label>
+                <input type="checkbox" name="banana" value="1" <%= @menu.banana ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="pork">豚肉</label>
+                <input type="checkbox" name="pork" value="1" <%= @menu.pork ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="matsutake_mushrooms">まつたけ</label>
+                <input type="checkbox" name="matsutake_mushrooms" value="1" <%= @menu.matsutake_mushrooms ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="peaches">もも</label>
+                <input type="checkbox" name="peaches" value="1" <%= @menu.peaches ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="yams">やまいも</label>
+                <input type="checkbox" name="yams" value="1" <%= @menu.yams ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="apples">りんご</label>
+                <input type="checkbox" name="apples" value="1" <%= @menu.apples ? 'checked' : '' %>>
+            </div>
+            <div class="form-group">
+                <label for="gelatin">ゼラチン</label>
+                <input type="checkbox" name="gelatin" value="1" <%= @menu.gelatin ? 'checked' : '' %>>
+            </div>
+            <input type="submit" value="変更">
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>

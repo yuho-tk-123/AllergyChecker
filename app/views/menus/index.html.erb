@@ -1,0 +1,48 @@
+<div class="main menus-index">
+  <div class="container">
+    <h1 class="menus-heading">メニュー一覧</h1>
+    <div class="menu-new">
+        <%= link_to("メニュー登録", "/menus/new") %>
+    </div>
+    <% if @menus_bread_rice.present? %>
+        <h3>パン・ごはん</h3>
+        <% @menus_bread_rice.each do |menu_bread_rice| %>
+            <div class="menus-index-item">
+                <div class="menu-right">
+                    <%= link_to(menu_bread_rice.name, "/menus/#{menu_bread_rice.id}") %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+    <% if @menus_milk.present? %>
+        <h3>牛乳</h3>
+        <% @menus_milk.each do |menu_milk| %>
+            <div class="menus-index-item">
+                <div class="menu-right">
+                    <%= link_to(menu_milk.name, "/menus/#{menu_milk.id}") %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+    <% if @menus_large_side_dish.present? %>
+        <h3>大きいおかず</h3>
+        <% @menus_large_side_dish.each do |menu_large_side_dish| %>
+            <div class="menus-index-item">
+                <div class="menu-right">
+                    <%= link_to(menu_large_side_dish.name, "/menus/#{menu_large_side_dish.id}") %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+    <% if @menus_small_side_dish.present? %>
+        <h3>小さいおかず</h3>
+        <% @menus_small_side_dish.each do |menu_small_side_dish| %>
+            <div class="menus-index-item">
+            <div class="menu-right">
+                <%= link_to(menu_small_side_dish.name, "/menus/#{menu_small_side_dish.id}") %>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+  </div>
+</div>

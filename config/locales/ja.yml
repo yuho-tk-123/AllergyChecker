@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      team: チーム
+      member: メンバー
+      menu: メニュー
+    attributes:
+      team:
+        name: チーム名
+        team_id: チームid
+        password: パスワード
+      member:
+        team_id: チームid
+        student_number: 出席番号
+        name: メンバー名
+      menu:
+        team_id: チームid
+        name: メニュー名
+        division: 分類

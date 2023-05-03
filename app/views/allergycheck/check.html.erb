@@ -1,0 +1,76 @@
+<div class="main allergycheck-check">
+  <div class="container">
+    <h1 class="allergycheck-heading">アレルギーチェック</h1>
+    <div class="form-body">
+    <%= form_tag("/allergycheck/result") do %>
+      <% if @menus_bread_rice.present? %>
+          <div class="selection bread_rice">
+              <h2>パン・ごはん</h2>
+              <select name="bread_rice">
+                  <option value=" ">パンごはんを選択</option>
+                  <% @menus_bread_rice.each do |menu_bread_rice| %>
+                      <option value=<%= menu_bread_rice.id %>><%= menu_bread_rice.name %></option>
+                  <% end %>
+              </select>
+          </div>
+      <% end %>
+      <% if @menus_milk.present? %>
+          <div class="selection milk">
+            <h2>牛乳</h2>
+            <select name="milk">
+              <option value=" ">牛乳を選択</option>
+              <% @menus_milk.each do |menu_milk| %>
+                <option value=<%= menu_milk.id %>><%= menu_milk.name %></option>
+              <% end %>
+            </select>
+          </div>
+      <% end %>
+      <% if @menus_large_side_dish.present? %>
+          <div class="selection large_side_dish">
+            <h2>大きいおかず</h2>
+            <select name="large_side_dish">
+              <option value=" ">大きいおかずを選択</option>
+              <% @menus_large_side_dish.each do |menu_large_side_dish| %>
+                <option value=<%= menu_large_side_dish.id %>><%= menu_large_side_dish.name %></option>
+              <% end %>
+            </select>
+          </div>
+      <% end %>
+      <% if @menus_small_side_dish.present? %>
+          <div class="selection small_side_dish">
+            <h2>小さいおかず1</h2>
+            <select name="small_side_dish_1">
+              <option value=" ">小さいおかず1を選択</option>
+              <% @menus_small_side_dish.each do |menu_small_side_dish| %>
+                <option value=<%= menu_small_side_dish.id %>><%= menu_small_side_dish.name %></option>
+              <% end %>
+            </select>
+          </div>
+      <% end %>
+      <% if @menus_small_side_dish.present? %>
+          <div class="selection small_side_dish">
+            <h2>小さいおかず2</h2>
+            <select name="small_side_dish_2">
+              <option value=" ">小さいおかず2を選択</option>
+              <% @menus_small_side_dish.each do |menu_small_side_dish| %>
+                <option value=<%= menu_small_side_dish.id %>><%= menu_small_side_dish.name %></option>
+              <% end %>
+            </select>
+          </div>
+      <% end %>
+      <% if @menus_small_side_dish.present? %>
+          <div class="selection small_side_dish">
+            <h2>小さいおかず3</h2>
+            <select name="small_side_dish_3">
+              <option value=" ">小さいおかず3を選択</option>
+              <% @menus_small_side_dish.each do |menu_small_side_dish| %>
+                <option value=<%= menu_small_side_dish.id %>><%= menu_small_side_dish.name %></option>
+              <% end %>
+            </select>
+          </div>
+      <% end %>
+      <input type="submit" value="チェック">
+    <% end %>
+    </div>
+  </div>
+</div>
